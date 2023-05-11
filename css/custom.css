@@ -7,26 +7,26 @@
     --info: #54B4D3;
     --warning: #FF9933;
     --danger: #E3371E;
-    --amarelo50: #FFFDE7;
-    --amarelo100: #FFF9C4;
-    --amarelo200: #FFF59D;
-    --amarelo300: #FFF176;
-    --amarelo400: #FFEE58;
-    --amarelo500: #FFEB3B;
-    --amarelo600: #FDD835;
-    --amarelo700: #FBC02D;
-    --amarelo800: #F9A825;
-    --amarelo900: #F57F17;
-    --amareloA1: #FFFF8D;
-    --amareloA2: #FFFF00;
-    --amareloA4: #FFEA00;
-    --amareloA7: #FFD600;
+    --verde50: #E8F5E9;
+    --verde100: #C8E6C9;
+    --verde200: #A5D6A7;
+    --verde300: #81C784;
+    --verde400: #66BB6A;
+    --verde500: #4CAF50;
+    --verde600: #43A047;
+    --verde700: #388E3C;
+    --verde800: #2E7D32;
+    --verde900: #1B5E20;
+    --verdeA1: #B9F6CA;
+    --verdeA2: #B9F6CA;
+    --verdeA4: #00E676;
+    --verdeA7: #00C853;
     --white: #ffffff;
-    --amber50: #FFF8E1;
-    --amber100: #FFECB3;
-    --amber200: #FFE082;
-    --amberA1: #FFE57F;
-    --amberA3: #FFD54F;
+    --verdinho50: #F1F8E9;
+    --verdinho100: #DCEDC8;
+    --verdinho200: #C5E1A5;
+    --verdinhoA1: #CCFF90;
+    --verdinhoA4: #76FF03;
 }
 
 
@@ -35,9 +35,9 @@
 
 /* a marcação dá um peso maior a regra, sobrescrevendo regras prévias */
 
-.bg-amberA3,
-.btn-amberA3 {
-    background-color: var(--amberA3);
+.bg-verdinhoA4,
+.btn-verdinhoA4 {
+    background-color: var(--verdinhoA4);
 }
 
 .bg-white,
@@ -45,74 +45,74 @@
     background-color: var(--white);
 }
 
-.bg-amarelo50,
-.btn-amarelo50 {
-    background-color: var(--amarelo50);
+.bg-verde50,
+.btn-verde50 {
+    background-color: var(--verde50);
 }
 
-.bg-amarelo100,
-.btn-amarelo100 {
-    background-color: var(--amarelo100);
+.bg-verde100,
+.btn-verde100 {
+    background-color: var(--verde100);
 }
 
-.bg-amarelo200,
-.btn-amarelo200 {
-    background-color: var(--amarelo200);
+.bg-verde200,
+.btn-verde200 {
+    background-color: var(--verde200);
 }
 
-.bg-amarelo300,
-.btn-amarelo300 {
-    background-color: var(--amarelo300);
+.bg-verde300,
+.btn-verde300 {
+    background-color: var(--verde300);
 }
 
-.bg-amarelo400,
-.btn-amarelo400 {
-    background-color: var(--amarelo400);
+.bg-verde400,
+.btn-verde400 {
+    background-color: var(--verde400);
 }
 
-.bg-amarelo500,
-.btn-amarelo500 {
-    background-color: var(--amarelo500);
+.bg-verde500,
+.btn-verde500 {
+    background-color: var(--verde500);
 }
 
-.bg-amarelo600,
-.btn-amarelo600 {
-    background-color: var(--amarelo600);
+.bg-verde600,
+.btn-verde600 {
+    background-color: var(--verde600);
 }
 
-.bg-amarelo700,
-.btn-amarelo700 {
-    background-color: var(--amarelo700);
+.bg-verde700,
+.btn-verde700 {
+    background-color: var(--verde700);
 }
 
-.bg-amarelo800,
-.btn-amarelo800 {
-    background-color: var(--amarelo800);
+.bg-verde800,
+.btn-verde800 {
+    background-color: var(--verde800);
 }
 
-.bg-amarelo900,
-.btn-amarelo900 {
-    background-color: var(--amarelo900);
+.bg-verde900,
+.btn-verde900 {
+    background-color: var(--verde900);
 }
 
-.bg-amareloA1,
-.btn-amareloA1 {
-    background-color: var(--amareloA1);
+.bg-verdeA1,
+.btn-verdeA1 {
+    background-color: var(--verdeA1);
 }
 
-.bg-amareloA2,
-.btn-amareloA2 {
-    background-color: var(--amareloA2);
+.bg-verdeA2,
+.btn-verdeA2 {
+    background-color: var(--verdeA2);
 }
 
-.bg-amareloA4,
-.btn-amareloA4 {
-    background-color: var(--amareloA4);
+.bg-verdeA4,
+.btn-verdeA4 {
+    background-color: var(--verdeA4);
 }
 
-.bg-amareloA7,
-.btn-amareloA5 {
-    background-color: var(--amareloA5);
+.bg-verdeA7,
+.btn-verdeA7 {
+    background-color: var(--verdeA7);
 }
 
 .nav-link {
@@ -123,19 +123,19 @@
     color: var(--warning);
 }
 
-.bg-amber50,
-.btn-amber50 {
-    background-color: var(--amber50);
+.bg-verdinho50,
+.btn-verdinho50 {
+    background-color: var(--verdinho50);
 }
 
-.bg-amber100,
-.btn-amber100 {
-    background-color: var(--amber100);
+.bg-verdinho100,
+.btn-verdinho100 {
+    background-color: var(--verdinho100);
 }
 
-.bg-amber200,
-.btn-amber200 {
-    background-color: var(--amber200);
+.bg-verdinho200,
+.btn-verdinho200 {
+    background-color: var(--verdinho200);
 }
 
 .bg-amaberA1,
