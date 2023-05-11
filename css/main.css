@@ -1,15 +1,19 @@
 html {
     scroll-behavior: smooth;
 }
+
 body {
     font-family: 'Montserrat' !important;
 }
-#main{
+
+#main {
     padding-bottom: 10rem !important;
 }
-p{
+
+p {
     line-height: 1.7rem !important;
 }
+
 #btn-back-to-top {
     position: fixed;
     bottom: 20px;
@@ -17,17 +21,17 @@ p{
     display: none;
 }
 
-ul.list-unstyled li img{
+ul.list-unstyled li img {
     max-width: 95px;
     border-radius: 100%;
     padding: 5px;
 }
 
-nav.barra-acessibilidade{
-    background-color: #D8D8D8;
+nav.barra-acessibilidade {
+    background-color: #FFD54F;
 }
 
-nav.barra-acessibilidade a:hover{
+nav.barra-acessibilidade a:hover {
     text-decoration: underline;
 }
 
@@ -43,23 +47,18 @@ nav.barra-acessibilidade a:hover{
     #main,
     #feedback,
     #about,
-    #contact
-    {
+    #contact {
         text-align: justify !important;
     }
-
     #contribute h2,
     #manuals h2,
     #main h1,
     #feedback h2,
     #about h2,
-    #contact h2
-    {
+    #contact h2 {
         text-align: center !important;
     }
-
-    #contribute .gh-button{
+    #contribute .gh-button {
         text-align: center !important;
     }
-
 }
