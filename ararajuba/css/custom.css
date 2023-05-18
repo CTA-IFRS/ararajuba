@@ -1,177 +1,192 @@
-
-html, body, main {
-	font-size: 1em;
-	height: 100%;
-}
-
-a {
-	color: black;
-}
-
-div.logo-container {
-	height: 100%;
-}
-
-h1.logo-img {
-	background-image: url("../img/logo-cta.png");
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: center;
-}
-
-.row {
-	margin-top: 10px;
-}
-
-.btn.btn-secondary {
-	background-color: rgb(120,120,120);
-	border: none !important;
-}
-
-.btn.btn-secondary.active, 
-.btn.btn-primary,
-.btn.btn-primary:hover, 
-.btn.btn-primary:focus 
-{
-	background-color: rgb(0,120,0) !important;
-	color: rgb(255,255,255) !important;
-}
-
-.btn.btn-primary {
-	border: none !important;
-}
-
-.page-footer {
-	display: none;
-	position: absolute;
-	width: 100%;
-	color: black;
-	background-color: rgb(120, 120, 120);
-}
-
-.page-footer a {
-	color: rgb(255,255,255);
-}
-
-#text {
-	font-size: 2em;
-	width: 100%;
-}
-
-#stop-hear, #stop-speak {
-	background-color:  rgb(160,0,0) !important;
-}
-
-#pause-speak {
-	background-color:  rgb(0,0,180) !important;
-}
-
-#sr-controls, #availability-info, #content, #accessibility-content, #speak-control-stop-me-if-you-can {
-	display: none;
-}
-
-#option-selector label, .comunica-controls input {
-	font-size: 0.8em;
-}
-
-button {
-	background-color: white;
-}
-
-button.icon, span.icon {
-	width:1.6em; 
-  	height:1.6em; 
-  	border: 0;
-	background-size: 100%; 
-}
-
-span.icon {
-	width: 100%;
-	background-size: 1.6em 1.6em;
-	background-position: center;
-	background-repeat: no-repeat;
-}
-
-
-#normal-contrast  {
-	background-image: url("../img/no-contrast-icon.png");	
-}
-#high-contrast  {
-	background-image: url("../img/high-contrast-icon.png");
-
-}
-#sepia-contrast  {
-	background-image: url("../img/sepia-contrast-icon.png");
-}
-
-#font-up  {
-	background-image: url("../img/font-plus-icon.png");	
-}
-#font-normal  {
-	background-image: url("../img/font-equal-icon.png");	
-}
-#font-down  {
-	background-image: url("../img/font-minus-icon.png");	
-}
-
-span.icon-microphone {
-	background-image: url("../img/microphone-icon.png");
-}
-
-span.icon-speaker {
-	background-image: url("../img/speaker-icon.png");
-}
-
-span.icon-no-microphone {
-	background-image: url("../img/no-microphone-icon.png");
-}
-
-span.icon-no-speaker {
-	background-image: url("../img/no-speaker-icon.png");
-}
-
-
-/* Alto-contraste */
-
-.alto-contraste, 
-.alto-contraste a,
-.alto-contraste #accessibility-bar button,  
-.alto-contraste textarea, 
-.alto-contraste select, 
-.alto-contraste textarea:focus,
-.alto-contraste .modal .modal-content *
-{
-	color: rgb(255,255,255);
-	background-color: rgb(0,0,0);
-
-}
-
-.alto-contraste h1.logo-img {
-	background-image: url("../img/logo-cta-contraste.png");
-}
-
-
-.sepia,
-.sepia a,
-.sepia #accessibility-bar button,
-.sepia textarea,
-.sepia select, 
-.sepia textarea:focus,
-.sepia .modal .modal-content *
-{
-	color: rgb(0,0,0);
-	background-color: #f4ecd8;
-}
-
-#text {
-	width: 20cm;
-	height: 13cm;
-	margin: 0 auto; /* Centralizar horizontalmente */
-	display: flex;
-	align-items: center; /* Centralizar verticalmente */
-	justify-content: center; /* Centralizar verticalmente */
-  }
-  
-
-
-
+        html,
+        body,
+        main {
+            font-size: 1em;
+            height: 100%;
+        }
+        
+        a {
+            color: black;
+        }
+        
+        div.logo-container {
+            height: 100%;
+        }
+        
+        h1.logo-img {
+            background-image: url("../img/logo-cta.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+        
+        .row {
+            margin-top: 10px;
+        }
+        
+        .btn.btn-secondary {
+            background-color: #9ca3af(120, 120, 120);
+            border: none !important;
+        }
+        
+        .btn.btn-secondary.active,
+        .btn.btn-primary,
+        .btn.btn-primary:hover,
+        .btn.btn-primary:focus {
+            background-color: #16a34a !important;
+            color: rgb(255, 255, 255) !important;
+        }
+        
+        .btn.btn-primary {
+            border: none !important;
+        }
+        
+        .page-footer {
+            display: none;
+            position: absolute;
+            width: 100%;
+            color: black;
+            background-color: rgb(120, 120, 120);
+        }
+        
+        .page-footer a {
+            color: rgb(255, 255, 255);
+        }
+        
+        #text {
+            font-size: 2em;
+            width: 100%;
+        }
+        
+        #stop-hear,
+        #stop-speak {
+            background-color: #ef4444 !important;
+        }
+        
+        #pause-speak {
+            background-color: rgb(0, 0, 180) !important;
+        }
+        
+        #sr-controls,
+        #availability-info,
+        #content,
+        #accessibility-content,
+        #speak-control-stop-me-if-you-can {
+            display: none;
+        }
+        
+        #option-selector label,
+        .comunica-controls input {
+            font-size: 0.8em;
+        }
+        
+        button {
+            background-color: white;
+        }
+        
+        button.icon,
+        span.icon {
+            width: 1.6em;
+            height: 1.6em;
+            border: 0;
+            background-size: 100%;
+        }
+        
+        span.icon {
+            width: 100%;
+            background-size: 1.6em 1.6em;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        #normal-contrast {
+            background-image: url("../img/no-contrast-icon.png");
+        }
+        
+        #high-contrast {
+            background-image: url("../img/high-contrast-icon.png");
+        }
+        
+        #sepia-contrast {
+            background-image: url("../img/sepia-contrast-icon.png");
+        }
+        
+        #font-up {
+            background-image: url("../img/font-plus-icon.png");
+        }
+        
+        #font-normal {
+            background-image: url("../img/font-equal-icon.png");
+        }
+        
+        #font-down {
+            background-image: url("../img/font-minus-icon.png");
+        }
+        
+        .icon-microphone {
+            width: 1cm;
+        }
+        
+        .icon-speaker {
+            width: 1cm;
+        }
+        
+        .icon-no-microphone {
+            width: 1cm;
+        }
+        
+        .icon-no-speaker {
+            width: 1cm;
+        }
+        
+        .botaofalar {
+            display: inline;
+            padding: 0.8cm;
+            margin-right: 14.5cm;
+        }
+        
+        .botao {
+            display: inline;
+            padding: 0.8cm;
+            right: 14.8cm;
+            height: 2cm;
+        }
+        /* Alto-contraste */
+        
+        .alto-contraste,
+        .alto-contraste a,
+        .alto-contraste #accessibility-bar button,
+        .alto-contraste textarea,
+        .alto-contraste select,
+        .alto-contraste textarea:focus,
+        .alto-contraste .modal .modal-content * {
+            color: rgb(255, 255, 255);
+            background-color: rgb(0, 0, 0);
+        }
+        
+        .alto-contraste h1.logo-img {
+            background-image: url("../img/logo-cta-contraste.png");
+        }
+        
+        .sepia,
+        .sepia a,
+        .sepia #accessibility-bar button,
+        .sepia textarea,
+        .sepia select,
+        .sepia textarea:focus,
+        .sepia .modal .modal-content * {
+            color: rgb(0, 0, 0);
+            background-color: #f4ecd8;
+        }
+        
+        #text {
+            width: 20cm;
+            height: 13cm;
+            margin: 0 auto;
+            /* Centralizar horizontalmente */
+            display: flex;
+            align-items: center;
+            /* Centralizar verticalmente */
+            justify-content: center;
+            /* Centralizar verticalmente */
+        }
