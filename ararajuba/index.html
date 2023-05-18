@@ -1,217 +1,203 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	<title>Ararajuba</title>
+    <title>Ararajuba</title>
 
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-	<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/bootstrap.css" />
-	<link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/custom.css" />
 
 </head>
 
 <body>
-	<main class="container-fluid">
-		<div id="availability-info" class="alert alert-warning mt-2" role="alert">
-			<p>
-				Desculpe, mas o seu navegador não tem suporte aos recursos necessário para executar as funções de
-				reconhecimento de voz.
-				Tente atualizar o seu navegador ou utilizar a última versão do <a
-					href="https://www.google.com.br/chrome/index.html">Google Chrome (link externo)</a>.
-			</p>
-		</div>
+    <main class="container-fluid">
+        <div id="availability-info" class="alert alert-warning mt-2" role="alert">
+            <p>
+                Desculpe, mas o seu navegador não tem suporte aos recursos necessário para executar as funções de reconhecimento de voz. Tente atualizar o seu navegador ou utilizar a última versão do <a href="https://www.google.com.br/chrome/index.html">Google Chrome (link externo)</a>.
+            </p>
+        </div>
 
-		<div class="row">
-			<div class="col-4 order-3" id="accessibility-content">
-				<div class="col-1">
-					<a href="#content-start" class="sr-only">Ir para o conteúdo</a>
-				</div>
-				<div class="col text-right" id="accessibility-bar">
-					<div class="d-inline-block mt-1">
-						<button type="button" id="font-up" class="icon">
-							<span class="sr-only">Aumentar fonte</span>
+        <div class="row">
+            <div class="col-4 order-3" id="accessibility-content">
+                <div class="col-1">
+                    <a href="#content-start" class="sr-only">Ir para o conteúdo</a>
+                </div>
+                <div class="col text-right" id="accessibility-bar">
+                    <div class="d-inline-block mt-1">
+                        <button type="button" id="font-up" class="icon">
+								<span class="sr-only">Aumentar fonte</span>
+							</button>
+                        <button type="button" id="font-normal" class="icon">
+								<span class="sr-only">Tamanho padrão da fonte</span>
+							</button>
+                        <button type="button" id="font-down" class="icon">
+								<span class="sr-only">Diminuir fonte</span>
+							</button>
+                    </div>
+                    <div class="d-inline-block ml-3 mt-1">
+                        <button type="button" id="normal-contrast" class="icon">
+								<span class="sr-only">Contraste normal</span>
+							</button>
+                        <button type="button" id="sepia-contrast" class="icon">
+								<span class="sr-only">Sépia</span>
+							</button>
+                        <button type="button" id="high-contrast" class="icon">
+								<span class="sr-only">Alto contraste</span>
+							</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4 order-1">
+                <div class="row logo-container">
+                    <h1 class="col text-center logo-img">
+                        <span class="sr-only">Logo do CTA - Centro Tecnológico de Acessibilidade</span>
+                    </h1>
+                    <div class="col text-left mt-2">
+                        <a href="#" data-toggle="modal" data-target="#sobre-modal">Ararajuba | Sobre</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col order-2 tts-controls">
+                <div class="row col text-right">
+                    <label for="voice" class="col-sm-2 col-form-label">Voz</label>
+                    <div class="col-sm-8">
+                        <select id="voice" class="form-control"></select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="content">
+            <div class="row">
+                <div class="col">
+                    <a id="content-start" href="#" class="sr-only sr-only-focusable">Início do conteúdo</a>
+                    <label for="text">
+							<span class="sr-only">Texto digitado/lido</span>
+						</label>
+                    <textarea class="form-control" id="text" rows="4"></textarea>
+                </div>
+            </div>
+
+            <div id="option-selector" class="row">
+                <div class="col text-center">
+                    <p id="option-description" class="sr-only">Escolha a opção desejada</p>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons" aria-labelledby="option-description">
+                        <label class="btn btn-secondary active">
+								<input type="radio" id="tts" checked> Texto para áudio
+							</label>
+                        <label class="btn btn-secondary">
+								<input type="radio" id="sr"> Áudio para texto
+							</label>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="comunica-controls mt-4" id="tts-controls">
+
+                <div class="col text-center">
+                    <button class="btn btn-primary p-4" type="button" id="speak">
+							<span class="icon icon-speaker d-block mb-2"></span>
+							<span>Ler em voz alta</span>
 						</button>
-						<button type="button" id="font-normal" class="icon">
-							<span class="sr-only">Tamanho padrão da fonte</span>
+                </div>
+
+
+                <div id="speak-control-stop-me-if-you-can">
+                    <!-- <div class="row">
+							 <div class="col">
+								<button class="btn btn-primary p-4 float-right" type="button" id="pause-speak">
+									<span class="bticon icon icon-no-speaker d-block mb-2"></span>
+									<span>Pausar leitura</span>
+								</button>
+							</div> -->
+                    <div class="col text-center">
+                        <button class="btn btn-primary p-4" type="button" id="stop-speak">
+									<span class="bticon icon icon-no-speaker d-block mb-2"></span>
+									<span>Parar leitura</span>
+								</button>
+                    </div>
+                    <!-- </div> -->
+                </div>
+
+            </div>
+
+
+            <div class="row comunica-controls mt-4" id="sr-controls">
+                <div class="col text-center">
+                    <button class="btn btn-primary p-4" type="button" id="hear">
+							<span class="icon icon-microphone d-block mb-2"></span>
+							<span>Iniciar</span>
 						</button>
-						<button type="button" id="font-down" class="icon">
-							<span class="sr-only">Diminuir fonte</span>
+                </div>
+                <div class="col text-center">
+                    <button class="btn btn-primary p-4" type="button" id="stop-hear">
+							<span class="bticon icon icon-no-microphone d-block mb-2"></span>
+							<span>Pausar</span>
 						</button>
-					</div>
-					<div class="d-inline-block ml-3 mt-1">
-						<button type="button" id="normal-contrast" class="icon">
-							<span class="sr-only">Contraste normal</span>
-						</button>
-						<button type="button" id="sepia-contrast" class="icon">
-							<span class="sr-only">Sépia</span>
-						</button>
-						<button type="button" id="high-contrast" class="icon">
-							<span class="sr-only">Alto contraste</span>
-						</button>
-					</div>
-				</div>
-			</div>
+                </div>
+            </div>
+        </div>
 
-			<div class="col-4 order-1">
-				<div class="row logo-container">
-					<h1 class="col text-center logo-img">
-						<span class="sr-only">Logo do CTA - Centro Tecnológico de Acessibilidade</span>
-					</h1>
-					<div class="col text-left mt-2">
-						<a href="#" data-toggle="modal" data-target="#sobre-modal">Ararajuba | Sobre</a>
-					</div>
-				</div>
-			</div>
+        <div class="nojs">
+            <div class="row">
+                <div class="alert alert-warning mt-2" , role="alert">
+                    <p>
+                        Desculpe, mas os recursos de "texto para fala" e "fala para texto" dependem do Javascript e o mesmo está dsabilitado ou indisponível no seu navegador. Por favor, habilite o Javascript ou tente utilizar outro navegador como <a href="https://www.google.com.br/chrome/index.html">Google Chrome (link externo)</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            document.querySelector(".nojs").style.display = "none";
+            document.querySelector("#accessibility-content").style.display = "block";
+            document.querySelector("#content").style.display = "block";
+        </script>
+    </main>
 
-			<div class="form-group col order-2 tts-controls">
-				<div class="row col text-right">
-					<label for="voice" class="col-sm-2 col-form-label">Voz</label>
-					<div class="col-sm-8">
-						<select id="voice" class="form-control"></select>
-					</div>
-				</div>
-			</div>
-		</div>
+    <div class="modal fade" id="sobre-modal" tabindex="-1" role="dialog" aria-labelledby="sobre-modal-label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="sobre-modal-label">Sobre o Ararajuba</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+					<span aria-hidden="true">&times;</span>
+				  </button>
+                </div>
+                <div class="modal-body">
+                    <p>Esta é uma ferramenta que realiza a conversão de texto para fala ou de fala para texto:</p>
+                    <ul>
+                        <li>
+                            A conversão de texto para fala pode ser útil para pessoas com comprometimento na fala, mas que possuem a escrita funcional. Neste caso, a pessoa pode digitar e a ferramenta irá transformar o texto em áudio. Para utilizar esta funcionalidade, selecione
+                            a opção "Texto para áudio", digite o texto e clique em "Ler em voz alta".
+                        </li>
+                        <li class="mt-2">
+                            A conversão de fala para texto é basicamente uma ferramenta de ditado, na qual a pessoa fala ou "dita" as palavras e estas são transformadas em texto pela ferramenta, podendo ser útil para pessoas que têm alguma dificuldade em digitar. Para utilizar esta
+                            funcionalidade, selecione a opção "Áudio para texto", clique em "Iniciar" para que a ferramenta comece a capturar sua fala e "Pausar" quando finalizar.
+                        </li>
+                    </ul>
 
-		<div id="content">
-			<div class="row">
-			  <div class="col">
-				<a id="content-start" href="#" class="sr-only sr-only-focusable">Início do conteúdo</a>
-				<label for="text">
-				  <span class="sr-only">Texto digitado/lido</span>
-				</label>
-				<textarea class="form-control" id="text" rows="8"></textarea>
-			  </div>
+                    <div class="footer-copyright pb-2 text-center">
+                        <a href="https://cta.ifrs.edu.br">CTA - Centro Tecnológico de Acessibilidade do IFRS</a>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-			  <div id="option-selector" class="col-md-6 text-right"  >
-				<p id="option-description" class="sr-only">Escolha a opção desejada</p>
-				<div class="text-right">
-				  <div class="btn-group-vertical" data-toggle="buttons">
-					<label class="btn btn-secondary active">
-					  <input type="radio" id="tts" name="option" checked> Texto para áudio
-					</label>
-					<label class="btn btn-secondary">
-					  <input type="radio" id="sr" name="option"> Áudio para texto
-					</label>
-				  </div>
-				</div>
-			  </div>
-			</div>
-		  </div>
-		  
-		  
-		  
-
-
-		<div class="comunica-controls" id="tts-controls" style="margin-top: -350px; margin-left: 3cm;">
-			<div class="col text-left">
-				<button class="btn btn-primary p-4" type="button" id="speak">
-					<span class="icon icon-speaker d-block mb-2"></span>
-					<span>Ler em voz alta</span>
-				</button>
-			</div>
-		</div>
-
-
-
-
-
-		<div id="speak-control-stop-me-if-you-can" style="margin-top: 0; margin-left: 3cm;">
-			<div class="col text-leftr">
-				<button class="btn btn-primary p-4" type="button" id="stop-speak">
-					<span class="bticon icon icon-no-speaker d-block mb-2"></span>
-					<span>Parar leitura</span>
-				</button>
-			</div>
-			<!-- </div> -->
-		</div>
-
-		</div>
-
-
-		<div class="comunica-controls" id="sr-controls" style="margin-top: -350px; margin-left: 3cm;">
-			<div class="col text-left">
-				<button class="btn btn-primary p-4" type="button" id="hear">
-					<span class="icon icon-microphone d-block mb-2"></span>
-					<span>Iniciar</span>
-				</button>
-			</div>
-			<div class="col text-left" style="margin-top: 0px; margin-left: 0cm;">
-				<button class="btn btn-primary p-4" type="button" id="stop-hear">
-					<span class="bticon icon icon-no-microphone d-block mb-2"></span>
-					<span>Pausar</span>
-				</button>
-			</div>
-		</div>
-		</div>
-
-		<div class="nojs">
-			<div class="row">
-				<div class="alert alert-warning mt-2" , role="alert">
-					<p>
-						Desculpe, mas os recursos de "texto para fala" e "fala para texto" dependem do Javascript e o
-						mesmo está dsabilitado ou indisponível no seu navegador.
-						Por favor, habilite o Javascript ou tente utilizar outro navegador como <a
-							href="https://www.google.com.br/chrome/index.html">Google Chrome (link externo)</a>
-					</p>
-				</div>
-			</div>
-		</div>
-		<script type="text/javascript">
-			document.querySelector(".nojs").style.display = "none";
-			document.querySelector("#accessibility-content").style.display = "block";
-			document.querySelector("#content").style.display = "block";
-		</script>
-	</main>
-
-	<div class="modal fade" id="sobre-modal" tabindex="-1" role="dialog" aria-labelledby="sobre-modal-label"
-		aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="sobre-modal-label">Sobre o Ararajuba</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<p>Esta é uma ferramenta que realiza a conversão de texto para fala ou de fala para texto:</p>
-					<ul>
-						<li>
-							A conversão de texto para fala pode ser útil para pessoas com comprometimento na fala,
-							mas que possuem a escrita funcional. Neste caso, a pessoa pode digitar e a ferramenta
-							irá transformar o texto em áudio. Para utilizar esta funcionalidade, selecione a opção
-							"Texto para áudio", digite o texto e clique em "Ler em voz alta".
-						</li>
-						<li class="mt-2">
-							A conversão de fala para texto é basicamente uma ferramenta de ditado, na qual a pessoa
-							fala ou "dita" as palavras e estas são transformadas em texto pela ferramenta, podendo
-							ser útil para pessoas que têm alguma dificuldade em digitar. Para utilizar esta
-							funcionalidade,
-							selecione a opção "Áudio para texto", clique em "Iniciar" para que a ferramenta comece a
-							capturar sua fala e "Pausar" quando finalizar.
-						</li>
-					</ul>
-
-					<div class="footer-copyright pb-2 text-center">
-						<a href="https://cta.ifrs.edu.br">CTA - Centro Tecnológico de Acessibilidade do IFRS</a>
-					</div>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-	<script type="text/javascript" src="js/popper.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/comunica.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/comunica.js"></script>
 </body>
 
 </html>
