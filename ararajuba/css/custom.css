@@ -124,32 +124,43 @@
         }
         
         .icon-microphone {
-            width: 1cm;
+            width: 0.8cm;
         }
         
         .icon-speaker {
-            width: 1cm;
+            width: 0.8cm;
         }
         
         .icon-no-microphone {
-            width: 1cm;
+            width: 0.8cm;
         }
         
         .icon-no-speaker {
-            width: 1cm;
+            width: 0.8cm;
         }
         
         .botaofalar {
             display: inline;
-            padding: 0.8cm;
-            margin-right: 14.5cm;
+            padding: 0.6cm 2cm;
+            /* Altere o valor do padding horizontal conforme necessário */
+            margin-top: -2cm;
+            /* Altere o valor do margin-top conforme necessário */
+            margin-right: 22.3cm;
         }
         
         .botao {
             display: inline;
-            padding: 0.8cm;
-            right: 14.8cm;
-            height: 2cm;
+            left: -9.8cm;
+            padding: 0.6cm 2cm;
+        }
+        
+        .botaofalarmicrofone {
+            display: inline;
+            padding: 0.6cm 2cm;
+            /* Altere o valor do padding horizontal conforme necessário */
+            margin-top: -3.4cm;
+            /* Altere o valor do margin-top conforme necessário */
+            margin-right: 22.3cm;
         }
         /* Alto-contraste */
         
@@ -180,8 +191,8 @@
         }
         
         #text {
-            width: 20cm;
-            height: 13cm;
+            width: 30cm;
+            height: 12cm;
             margin: 0 auto;
             /* Centralizar horizontalmente */
             display: flex;

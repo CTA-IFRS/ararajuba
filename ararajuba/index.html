@@ -71,14 +71,13 @@
                 </div>
             </div>
         </div>
-
         <div id="content">
             <div class="row">
                 <div class="col">
                     <a id="content-start" href="#" class="sr-only sr-only-focusable">Início do conteúdo</a>
                     <label for="text">
-							<span class="sr-only">Texto digitado/lido</span>
-						</label>
+                  <span class="sr-only">Texto digitado/lido</span>
+                </label>
                     <textarea class="form-control" id="text" rows="4"></textarea>
                 </div>
             </div>
@@ -86,59 +85,65 @@
             <div id="option-selector" class="row">
                 <div class="col text-right">
                     <p id="option-description" class="sr-only">Escolha a opção desejada</p>
-                    <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons" aria-labelledby="option-description">
-                        <label class="btn btn-secondary active btn-lg botao fw-500 py-2 px-4 me-sm-3 mb-3 mb-sm-0">
-								<input type="radio" id="tts" checked> Texto para áudio
-                        </label>
-                        <label class="btn btn-secondary mt-4 btn-lg botao fw-500 py-2 px-4 me-sm-3 mb-3 mb-sm-0">
-								<input type="radio" id="sr"> Áudio para texto
-							</label>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons" aria-labelledby="option-description">
+                        <label class="btn btn-secondary active botao">
+                    <input type="radio" id="tts" checked> Texto para áudio
+                  </label>
+                        <label class="btn btn-secondary botao">
+                    <input type="radio" id="sr"> Áudio para texto
+                  </label>
                     </div>
                 </div>
             </div>
+        </div>
 
 
 
-            <div class="comunica-controls mt-4" id="tts-controls">
-
-                <div class="col text-center">
-                    <button class="btn btn-primary botaofalar" type="button" id="speak">
-							<span><img src="img/speaker-icon.png" class="icon-speaker" > Ler em voz alta</span>
-						</button>
-                </div>
 
 
-                <div id="speak-control-stop-me-if-you-can">
-                    <!-- <div class="row">
+
+        <div class="comunica-controls" id="tts-controls">
+            <div class="col text-center">
+                <button class="btn btn-primary botaofalar" type="button" id="speak">
+                        <span><img src="img/speaker-icon.png" class="icon-speaker" > Ler em voz alta</span>
+                    </button>
+            </div>
+        </div>
+
+
+
+
+        <div id="speak-control-stop-me-if-you-can">
+            <!-- <div class="row">
 							 <div class="col">
 								<button class="btn btn-primary p-4 float-right" type="button" id="pause-speak">
 									<span class="bticon icon icon-no-speaker d-block mb-2"></span>
 									<span>Pausar leitura</span>
 								</button>
 							</div> -->
-                    <div class="col text-center">
-                        <button class="btn btn-primary botaofalar" type="button" id="stop-speak">
+            <div class="col text-center">
+                <button class="btn btn-primary botaofalar" type="button" id="stop-speak">
 									<span><img class="icon-no-speaker" src="img/no-speaker-icon.png"> Parar leitura</span>
 								</button>
-                    </div>
-                    <!-- </div> -->
-                </div>
-
             </div>
+            <!-- </div> -->
+        </div>
+
+        </div>
 
 
-            <div class="row comunica-controls mt-4" id="sr-controls">
-                <div class="col text-center">
-                    <button class="btn btn-primary  botaofalar" type="button" id="hear">
+        <div class="row comunica-controls mt-4" id="sr-controls">
+            <div class="col text-center">
+                <button class="btn btn-primary  botaofalarmicrofone" type="button" id="hear">
 							<span><img src="img/microphone-icon.png" class="icon-microphone">  Iniciar</span>
 						</button>
-                </div>
-                <div class="col text-center">
-                    <button class="btn btn-primary botaofalar" type="button" id="stop-hear">
+            </div>
+            <div class="col text-center">
+                <button class="btn btn-primary botaofalar" type="button" id="stop-hear">
 							<span><img src="img/no-microphone-icon.png" class="icon-no-microphone"> Pausar</span>
 						</button>
-                </div>
             </div>
+        </div>
         </div>
 
         <div class="nojs">
