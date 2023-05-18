@@ -163,7 +163,15 @@ span.icon-no-speaker {
 	background-color: #f4ecd8;
 }
 
-
+#text {
+	width: 20cm;
+	height: 13cm;
+	margin: 0 auto; /* Centralizar horizontalmente */
+	display: flex;
+	align-items: center; /* Centralizar verticalmente */
+	justify-content: center; /* Centralizar verticalmente */
+  }
+  
 
 
 
