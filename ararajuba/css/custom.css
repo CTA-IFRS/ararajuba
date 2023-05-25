@@ -25,7 +25,7 @@
         }
         
         .btn.btn-secondary {
-            background-color: #9ca3af(120, 120, 120);
+            background-color: rgb(120, 120, 120);
             border: none !important;
         }
         
@@ -33,7 +33,7 @@
         .btn.btn-primary,
         .btn.btn-primary:hover,
         .btn.btn-primary:focus {
-            background-color: #16a34a !important;
+            background-color: rgb(0, 120, 0) !important;
             color: rgb(255, 255, 255) !important;
         }
         
@@ -53,14 +53,24 @@
             color: rgb(255, 255, 255);
         }
         
+        #speak {
+            padding: 0.5cm;
+            width: 5.5cm;
+        }
+        
         #text {
             font-size: 2em;
             width: 100%;
         }
         
+        #stop-speak {
+            padding: 0.5cm;
+            width: 5.5cm;
+        }
+        
         #stop-hear,
         #stop-speak {
-            background-color: #ef4444 !important;
+            background-color: rgb(160, 0, 0) !important;
         }
         
         #pause-speak {
@@ -123,44 +133,20 @@
             background-image: url("../img/font-minus-icon.png");
         }
         
-        .icon-microphone {
-            width: 0.8cm;
+        span.icon-microphone {
+            background-image: url("../img/microphone-icon.png");
         }
         
-        .icon-speaker {
-            width: 0.8cm;
+        span.icon-speaker {
+            background-image: url("../img/speaker-icon.png");
         }
         
-        .icon-no-microphone {
-            width: 0.8cm;
+        span.icon-no-microphone {
+            background-image: url("../img/no-microphone-icon.png");
         }
         
-        .icon-no-speaker {
-            width: 0.8cm;
-        }
-        
-        .botaofalar {
-            display: inline;
-            padding: 0.6cm 2cm;
-            /* Altere o valor do padding horizontal conforme necessário */
-            margin-top: -2cm;
-            /* Altere o valor do margin-top conforme necessário */
-            margin-right: 22.3cm;
-        }
-        
-        .botao {
-            display: inline;
-            left: -9.8cm;
-            padding: 0.6cm 2cm;
-        }
-        
-        .botaofalarmicrofone {
-            display: inline;
-            padding: 0.6cm 2cm;
-            /* Altere o valor do padding horizontal conforme necessário */
-            margin-top: -3.4cm;
-            /* Altere o valor do margin-top conforme necessário */
-            margin-right: 22.3cm;
+        span.icon-no-speaker {
+            background-image: url("../img/no-speaker-icon.png");
         }
         /* Alto-contraste */
         
@@ -191,6 +177,7 @@
         }
         
         #text {
+            border: 1px solid #b1d4b1;
             width: 30cm;
             height: 12cm;
             margin: 0 auto;
@@ -200,4 +187,23 @@
             /* Centralizar verticalmente */
             justify-content: center;
             /* Centralizar verticalmente */
+        }
+        
+        .form-control {
+            display: block;
+            width: 100%;
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+        
+        .link:hover {
+            color: rgb(4, 92, 4);
+            font-weight: bold;
         }
