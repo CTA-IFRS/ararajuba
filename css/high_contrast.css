@@ -67,6 +67,6 @@
     box-shadow: 0 0 1em #1069D9;
 }
 
-.alto-contraste .iconslist {
-    border-color: #ffffff !important;
+.alto-contraste .iconslist .bg-verde700 {
+    background-color: #ffffff !important;
 }
