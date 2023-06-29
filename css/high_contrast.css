@@ -70,3 +70,21 @@
 .alto-contraste .iconslist .bg-verde700 {
     background-color: #ffffff !important;
 }
+
+.alto-contraste .btn {
+    background-color: #ffffff !important;
+    color: black !important;
+}
+
+.btn {
+    text-transform: uppercase;
+}
+
+.btn {
+    background-color: #2E7D32 !important;
+    color: #ffffff!important;
+}
+
+.btn:hover {
+    background-color: #43A047 !important;
+}

@@ -23,3 +23,21 @@ nav.barra-acessibilidade .ml-auto {
 nav.barra-acessibilidade .btn-a11y {
     box-shadow: none;
 }
+
+.alto-contraste .btn {
+    background-color: #ffffff !important;
+    color: black !important;
+}
+
+.btn {
+    text-transform: uppercase;
+}
+
+.btn {
+    background-color: #2E7D32 !important;
+    color: #ffffff!important;
+}
+
+.btn:hover {
+    background-color: #43A047 !important;
+}
