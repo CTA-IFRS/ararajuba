@@ -68,5 +68,5 @@
 }
 
 .alto-contraste .iconslist {
-    color: #ffffff;
+    background-color: #ffffff !important;
 }
