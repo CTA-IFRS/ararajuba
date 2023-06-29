@@ -25,8 +25,8 @@ nav.barra-acessibilidade .btn-a11y {
 }
 
 .alto-contraste .btn {
-    color: black !important;
-    border: #ffffff !important;
+    color: rgb(255, 255, 255) !important;
+    border: 2px #ffffff !important;
     background-color: black !important;
 }
 
