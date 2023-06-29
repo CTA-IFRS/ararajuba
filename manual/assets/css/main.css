@@ -25,13 +25,9 @@ nav.barra-acessibilidade .btn-a11y {
 }
 
 .alto-contraste .btn {
-    text-transform: uppercase!important;
     color: black !important;
-    background-color: white !important;
-}
-
-.btn {
-    text-transform: uppercase;
+    border: #ffffff !important;
+    background-color: black !important;
 }
 
 .btn {
@@ -44,6 +40,7 @@ nav.barra-acessibilidade .btn-a11y {
 }
 
 .alto-contraste .btn:hover {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5) !important;
-    background-color: white !important;
+    border: #ffffff !important;
+    box-shadow: whitesmoke !important;
+    background-color: black !important;
 }
