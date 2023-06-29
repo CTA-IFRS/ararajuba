@@ -72,8 +72,9 @@
 }
 
 .alto-contraste .btn {
-    background-color: #ffffff !important;
+    text-transform: uppercase!important;
     color: black !important;
+    background-color: white !important;
 }
 
 .btn {
@@ -87,4 +88,8 @@
 
 .btn:hover {
     background-color: #43A047 !important;
+}
+
+.alto-contraste .btn:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5) !important;
 }
