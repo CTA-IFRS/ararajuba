@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="./favicon.ico" alt="logotipo Ararajuba em formato de Arara" />
+    <link rel="icon" href="./favicon.ico" alt="Logotipo Ararajuba em formato de Arara" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -38,7 +38,7 @@
         </div>
 
         <div class="row">
-            <div class="col-2 order-3 mt-4" id="accessibility-content">
+            <div class="col-4 order-3 mt-4" id="accessibility-content">
                 <div class="col-1">
                     <a href="#content-start" class="sr-only">Ir para o conteúdo</a>
                 </div>
@@ -54,7 +54,7 @@
               <span class="sr-only">Diminuir fonte</span>
             </button>
                     </div>
-                    <div class="d-inline-block ml-3 mt-1">
+                    <div class="d-inline-block mt-1">
                         <button type="button" id="normal-contrast" class="icon">
               <span class="sr-only">Contraste normal</span>
             </button>
@@ -71,24 +71,36 @@
 
 
 
-            <div class="col-5">
+            <div class="col-4">
                 <div class="row logo-container">
-                    <h1 class="col text-center logo-img">
+                    <!-- <h1 class="col text-center logo-img">
                         <span class="sr-only">Logo do CTA - Centro Tecnológico de Acessibilidade</span>
-                    </h1>
+                    </h1> -->
                     <div class="text-left mt-2">
+                        <a href="/"  class="link" >
+                            <img src="../img/ararajuba.png" height="80px" alt="logotipo Ararajuba">
+                        </a>
+                    </div>
+                    <div class="text-center">
+                        <div style="height:30%"></div>
+                        <a href="/"  class="link" >
+                            <h1 class="h6 d-inline">Ararajuba</h1>
+                        </a>
+                        
+                        <span>|</span>
                         <a href="#" data-toggle="modal" class="link" data-target="#sobre-modal">
-                            <img src="../img/ararajuba.png" height="80px" alt="logotipo Ararajuba">Ararajuba | Sobre</a>
+                            Sobre
+                        </a>
                     </div>
                 </div>
             </div>
 
 
-            <div class="form-group col order-2 tts-controls mt-4 ">
-                <div class="row col text-right ml-5">
-                    <label for="voice" class="col-sm-2 col-form-label">Voz</label>
-                    <div class="col-sm-8">
-                        <select id="voice" class="form-control"></select>
+            <div class="form-group col order-2 tts-controls mt-4">
+                <div class="row text-right">
+                    <label for="voice" class="col-2 col-form-label">Voz</label>
+                    <div class="col">
+                        <select id="voice" class="form-control col"></select>
                     </div>
                 </div>
             </div>
@@ -101,7 +113,7 @@
                     <label for="text">
 							<span class="sr-only">Texto digitado/lido</span>
 						</label>
-                    <textarea class="form-control" id="text" rows="4"></textarea>
+                    <textarea class="form-control" id="text"></textarea>
                 </div>
             </div>
 
@@ -205,8 +217,10 @@
                         </li>
                     </ul>
 
-                    <div class="footer-copyright pb-2 text-center">
-                        <a href="https://cta.ifrs.edu.br">CTA - Centro Tecnológico de Acessibilidade do IFRS</a>
+                    <div class="footer-copyright pb-2 text-center logo-img">
+                        <a href="https://cta.ifrs.edu.br">
+                            <img src="../img/logo-cta.png" width="160px" alt="Logo do CTA - Centro Tecnológico de Acessibilidade do IFRS" />
+                        </a>
                     </div>
                 </div>
                 <div class="modal-footer">
