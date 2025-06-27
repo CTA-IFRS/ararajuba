@@ -1,10 +1,11 @@
 function setOptions() {
-    var checkAndDo = function(radio, f) {
-        return ($(radio).is(":checked")) ? f(radio) : null;
-    }
+    $('#option-selector .nav-link').on('click', function (e) {
+        e.preventDefault();
+        const mode = $(this).data('mode');
+        $('#option-selector .nav-link').removeClass('active');
+        $(this).addClass('active');
 
-    $("#tts").change(function(ev) {
-        checkAndDo(this, function(r) {
+        if (mode === 'tts') {
             $("#sr").prop('tabindex', -1);
             $("#tts").prop('tabindex', 0);
             $("#tts-controls").show();
@@ -12,11 +13,7 @@ function setOptions() {
             $(".tts-controls div").removeClass('invisible');
             $('.tts-controls select').prop('disabled', false);
             $(".sr-controls").hide();
-        });
-    });
-
-    $("#sr").change(function(ev) {
-        checkAndDo(this, function(r) {
+        }else if (mode === 'sr') {
             $("#sr").prop('tabindex', 0);
             $("#tts").prop('tabindex', -1);
             $("#sr-controls").show();
@@ -25,10 +22,13 @@ function setOptions() {
             $(".tts-controls div").addClass('invisible');
             $('.tts-controls select').prop('disabled', true);
             $("#text").val("");
-        });
+        };
     });
 
 }
+
+let selectedVoice = null;
+let selectedRate = 1;
 
 function setSpeakFunction(voices) {
     $("#speak").click(function(ev) {
@@ -37,10 +37,10 @@ function setSpeakFunction(voices) {
 
         var msg = new SpeechSynthesisUtterance(textVal);
         msg.volume = 1;
-        msg.voice = voices[$("#voice").val()];
-        //msg.pitch = 0;
+        msg.voice = selectedVoice || voices[0];
+        msg.rate = selectedRate || 1;
 
-        msg.onend = function(event) {
+        msg.onend = function() {
             $("#speak-control-stop-me-if-you-can").hide();
             $("#speak").show();
         };
@@ -56,9 +56,13 @@ function setSpeakFunction(voices) {
         window.speechSynthesis.cancel();
     });
 
-    // $("#pause-speak").click(function () {
+    $("#aplicarfiltros").click(function () {
+        const voiceIndex = $("#voice").val();
+        selectedVoice = loadVoices.voices[voiceIndex];
 
-    // });
+        const velocidadeValor = parseInt($("#velocidade").val(), 10);
+        selectedRate = Math.max(0.1, velocidadeValor / 50);
+    });
 }
 
 function setAccessibilityFunctions() {
@@ -183,8 +187,28 @@ function loadVoices(f) {
     }
 }
 
+function closeConfiguracoesCollapse() {
+    const $collapse = $('#collapseConfiguracoes');
+    const $closeBtn = $('#collapseConfiguracoes .btn-close');
+
+    $closeBtn.on('click', function () {
+        $collapse.removeClass('show');
+    });
+}
+
+function closeMenuCollapse() {
+    const $collapse = $('#collapseMenu');
+    const $closeBtn = $('#collapseMenu .btn-close');
+
+    $closeBtn.on('click', function () {
+        $collapse.removeClass('show');
+    });
+}
+
 $(document).ready(function() {
     setAccessibilityFunctions();
+    closeConfiguracoesCollapse();
+    closeMenuCollapse();
 
     var voicesLoaderFunction = function(voices) {
         var selectVoices = document.querySelector("#voice");
@@ -216,36 +240,34 @@ $(document).ready(function() {
                 return acc + evalTranscript(speechResult[0].transcript);
             }, ""));
             $("#text").focus();
-        }
+        };
 
         var animObject = animate($(".bticon"), 10, -10);
 
-        recog.onspeechstart = function(ev) {
-            console.log("speech start");
+        recog.onspeechstart = function() {
             animObject.start();
-        }
+        };
 
-        recog.onspeechend = function(ev) {
-            console.log("speech end");
+        recog.onspeechend = function() {
             animObject.end();
-        }
+        };
 
         recog.onend = function() {
             $("#stop-hear").trigger("click");
-        }
+        };
 
         recog.onerror = function(ev) {
             console.log(ev.error + ": " + ev.message);
-        }
+        };
 
-        $("#stop-hear").click(function(ev) {
+        $("#stop-hear").click(function() {
             recog.stop();
             $("#stop-hear").parent().hide();
             $("#hear").parent().show();
             animObject.end();
         });
 
-        $("#hear").click(function(ev) {
+        $("#hear").click(function() {
             recog.start();
             $("#stop-hear").parent().show();
             $("#hear").parent().hide();
@@ -259,7 +281,7 @@ $(document).ready(function() {
         $("#availability-info").show();
 
         loadVoices(voicesLoaderFunction);
-    }
+    };
 
     testAPIAvailability(f_yes, f_no);
 

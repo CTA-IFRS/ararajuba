@@ -119,27 +119,27 @@
         }
         
         #normal-contrast {
-            background-image: url("../img/no-contrast-icon.png");
+            background: url("../img/no-contrast-icon.png") center left no-repeat;
         }
         
         #high-contrast {
-            background-image: url("../img/high-contrast-icon.png");
+            background: url("../img/high-contrast-icon.png") center left no-repeat;
         }
         
         #sepia-contrast {
-            background-image: url("../img/sepia-contrast-icon.png");
+            background: url("../img/sepia-contrast-icon.png") center left no-repeat;
         }
         
         #font-up {
-            background-image: url("../img/font-plus-icon.png");
+            background: url("../img/font-plus-icon.png") center left no-repeat;
         }
         
         #font-normal {
-            background-image: url("../img/font-equal-icon.png");
+            background: url("../img/font-equal-icon.png") center left no-repeat;
         }
         
         #font-down {
-            background-image: url("../img/font-minus-icon.png");
+            background: url("../img/font-minus-icon.png") center left no-repeat;
         }
         
         span.icon-microphone {
@@ -216,3 +216,249 @@
             color: rgb(4, 92, 4);
             font-weight: bold;
         }
+
+:root {
+    --success: #28A745;
+    --danger: #DC3545;
+    --warning: #FFC107;
+    --info: #17A2B8;
+    --gray100: #F8F9FA;
+    --gray200: #E9ECEF;
+    --gray300: #DEE2E6;
+    --gray400: #CED4DA;
+    --gray500: #ADB5BD;
+    --gray600: #6C757D;
+    --gray700: #495057;
+    --gray800: #343A40;
+    --gray900: #212529;
+    --white: #ffffff;
+    --black: #ffffff;
+    --ar1: #E8F5E9;
+    --ar2: #ABD99B;
+    --ar3: #84BE70;
+    --ar4: #639A50;
+    --ar5: #1B5E20;
+    --ar6: #0D3A10;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+        
+body {
+    background-color: var(--gray100);
+}
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    font-weight: 700;
+    color: var(--gray900);
+}
+.h1 {
+    font-size: 40px;
+}
+.h2 {
+    font-size: 32px;
+}
+.h3 {
+    font-size: 28px;
+}
+.h4 {
+    font-size: 24px;
+}
+.h5 {
+    font-size: 20px;
+}
+.h6 {
+    font-size: 16px;
+}
+.base-text {
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: var(--gray600);
+}
+.lead-text {
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 34px;
+    color: var(--gray600);
+}
+.base-text2 {
+    font-family: "Nunito", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: var(--gray600);
+}
+.lead-text2 {
+    font-family: "Nunito", sans-serif;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 34px;
+    color: var(--gray600);
+}
+.strong-text2 {
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 28px;
+    color: var(--gray900);
+}
+.btn {
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: uppercase;
+    border-radius: 50rem;
+    width: auto !important;
+    padding: 10px 26px !important;
+    min-height: 48px;
+    align-items: center;
+    display: flex;
+    gap: 8px;
+}
+.btn.btn-primary,
+.btn.btn-secondary.active,
+.btn.btn-secondary:hover,
+.btn.btn-secondary:focus,
+.btn.btn-outline.active,
+.btn.btn-outline:hover,
+.btn.btn-outline:focus {
+    background-color: var(--ar5) !important;
+    color: var(--white) !important;
+}
+.btn.btn-primary.active,
+.btn.btn-primary:hover,
+.btn.btn-primary:focus {
+    background-color: var(--ar6) !important;
+}
+.btn.btn-secondary {
+    background-color: var(--ar1) !important;
+    color: var(--ar6) !important;
+}
+.btn.btn-outline {
+    background-color: transparent !important;
+    color: var(--ar5) !important;
+    border: 1px solid var(--ar5);
+    box-sizing: border-box;
+}
+.btn.btn-primary.btn-gray.active,
+.btn.btn-primary.btn-gray:hover,
+.btn.btn-primary.btn-gray:focus,
+.btn.btn-secondary.btn-gray.active,
+.btn.btn-secondary.btn-gray:hover,
+.btn.btn-secondary.btn-gray:focus,
+.btn.btn-outline.btn-gray.active,
+.btn.btn-outline.btn-gray:hover,
+.btn.btn-outline.btn-gray:focus {
+    background-color: var(--gray800) !important;
+    color: var(--white) !important;
+}
+.btn.btn-primary.btn-gray {
+    background-color: var(--gray700) !important;
+    color: var(--white) !important;
+}
+.btn.btn-secondary.btn-gray {
+    background-color: var(--gray200) !important;
+    color: var(--gray900) !important;
+}
+.btn.btn-outline.btn-gray {
+    background-color: transparent !important;
+    color: var(--gray800) !important;
+    border: 1px solid var(--gray800);
+    box-sizing: border-box;
+}
+.form-control {
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--gray800);
+    background-color: var(--gray100);
+    border: 1px solid var(--gray500);
+    border-radius: 0.5rem;
+}
+.rounded-2 {
+    border-radius: 0.375rem;
+}
+.rounded-3 {
+    border-radius: 0.5rem;
+}
+.rounded-4 {
+    border-radius: 0.75rem;
+}
+.rounded-5 {
+    border-radius: 1rem;
+}
+.rounded-6 {
+    border-radius: 2rem;
+}
+.rounded-7 {
+    border-radius: 50rem;
+}
+.nav-tabs .nav-item {
+    align-items: flex-end;
+    display: flex;
+}
+.nav-tabs .nav-link {
+    border: 1px solid var(--gray500);
+    color: var(--gray700);
+}
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+    color: var(--gray900);
+    background-color: #fff;
+    border-color:  var(--gray500) var(--gray500) #fff;
+}
+.shadow {
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.15) !important;
+}
+.btn-menu {
+    color: var(--gray700);
+    border: 1px solid var(--gray400);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px !important;
+    height: 60px;
+    box-sizing: border-box;
+}
+#collapseConfiguracoes,
+#collapseMenu {
+    position: fixed;
+    width: 287px;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    border-radius: 8px 0 0 8px;
+}
+#collapseConfiguracoes button.icon {
+    background-size: 19px !important;
+    padding-left: 30px;
+    width: fit-content;
+    height: auto;
+    color: var(--gray900);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+#collapseConfiguracoes.collapsing,
+#collapseMenu.collapsing {
+    transition: none !important;
+}
+header .botoes .btn-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border: none;
+    color: var(--gray600);
+}
+.small-btn {
+    font-size: 14px !important;
+    padding: 5px 18px !important;
+    min-height: 36px !important
+}
+#collapseConfiguracoes form label {
+    color: var(--gray900);
+}
