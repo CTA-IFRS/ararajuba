@@ -66,7 +66,7 @@
                             <button type="button" id="sepia-contrast" class="icon base-text my-2 py-2">Sépia</button>
                             <button type="button" id="high-contrast" class="icon base-text my-2 py-2">Alto contraste</button>
                         </div>
-                        <form>
+                        <form class="tts-controls">
                             <div class="form-group order-2 tts-controls mb-2">
                                 <div>
                                     <label for="voice" class="base-text col-form-label d-flex align-items-center"><i class="bi bi-volume-down-fill mr-1" style="font-size: 30px; margin-left: -4px;"></i>Voz</label>
@@ -89,13 +89,23 @@
                         </a>
                     </p>
                     <div class="collapse bg-white shadow p-3" id="collapseMenu">
-                        <div class="d-flex justify-content-between align-items-end mb-3">
-                        <h2 class="h5">Menu</h2>
-                            <button type="button" class="btn-close" aria-label="Fechar"><i class="bi bi-x" style="font-size: 40px;"></i></button>
+                        <div class="d-flex flex-column h-100">
+                            <div class="d-flex justify-content-between align-items-end mb-1">
+                                <h2 class="h5">Menu</h2>
+                                <button type="button" class="btn-close" aria-label="Fechar"><i class="bi bi-x" style="font-size: 40px;"></i></button>
+                            </div>
+                            <div>
+                                <a href="#" data-toggle="modal" class="nav-link my-2" data-target="#sobre-modal">
+                                    Sobre
+                                </a>
+                                <a href="../manual/index.html#section-2" class="nav-link my-2">
+                                    Manual (link externo)
+                                </a>
+                            </div>
+                            <a href="https://cta.ifrs.edu.br" class="logo-cta mt-auto">
+                                <img src="../img/logo-cta.png" width="160px" alt="Logo do CTA - Centro Tecnológico de Acessibilidade do IFRS" />
+                            </a>
                         </div>
-                        <a href="#" data-toggle="modal" class="link" data-target="#sobre-modal">
-                            Sobre
-                        </a>
                     </div>
                 </div>
             </div>
@@ -117,10 +127,10 @@
                     <div aria-labelledby="option-description">
                         <ul class="nav nav-tabs" id="mode-tabs">
                             <li class="nav-item">
-                                <a class="nav-link active" href="#" data-mode="tts"><i class="bi bi-volume-up-fill" style="font-size: 18px;"></i>Texto para Áudio</a>
+                                <a class="nav-link active" href="#" data-mode="tts"><i class="bi bi-volume-up-fill mr-2" style="font-size: 18px;"></i>Texto para Áudio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" data-mode="sr"><i class="bi bi-mic-fill" style="font-size: 16px;"></i>Áudio para Texto</a>
+                                <a class="nav-link" href="#" data-mode="sr"><i class="bi bi-mic-fill mr-2" style="font-size: 16px;"></i>Áudio para Texto</a>
                             </li>
                         </ul>
                     </div>
@@ -190,34 +200,33 @@
 
     <div class="modal fade" id="sobre-modal" tabindex="-1" role="dialog" aria-labelledby="sobre-modal-label" aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="sobre-modal-label">Sobre o Ararajuba</h5>
+            <div class="modal-content p-4">
+                <div class="modal-header p-0 pb-3">
+                    <h5 class="modal-title h4" id="sobre-modal-label">Sobre o Ararajuba</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
 					<span aria-hidden="true">&times;</span>
 				  </button>
                 </div>
-                <div class="modal-body">
-                    <p>Esta é uma ferramenta que realiza a conversão de texto para fala ou de fala para texto:</p>
+                <div class="modal-body px-0">
+                    <p class="lead-text">Esta é uma ferramenta que realiza a conversão de texto para fala ou de fala para texto:</p>
                     <ul>
-                        <li>
+                        <li class="base-text">
                             A conversão de texto para fala pode ser útil para pessoas com comprometimento na fala, mas que possuem a escrita funcional. Neste caso, a pessoa pode digitar e a ferramenta irá transformar o texto em áudio. Para utilizar esta funcionalidade, selecione
                             a opção "Texto para áudio", digite o texto e clique em "Ler em voz alta".
                         </li>
-                        <li class="mt-2">
+                        <li class="mt-4 base-text">
                             A conversão de fala para texto é basicamente uma ferramenta de ditado, na qual a pessoa fala ou "dita" as palavras e estas são transformadas em texto pela ferramenta, podendo ser útil para pessoas que têm alguma dificuldade em digitar. Para utilizar esta
                             funcionalidade, selecione a opção "Áudio para texto", clique em "Iniciar" para que a ferramenta comece a capturar sua fala e "Pausar" quando finalizar.
                         </li>
                     </ul>
-
-                    <div class="footer-copyright pb-2 text-center logo-img">
-                        <a href="https://cta.ifrs.edu.br">
-                            <img src="../img/logo-cta.png" width="160px" alt="Logo do CTA - Centro Tecnológico de Acessibilidade do IFRS" />
-                        </a>
-                    </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+                <div class="modal-footer px-0 pb-2 pt-4">
+                    <a href="https://cta.ifrs.edu.br" class="mr-4">
+                        <img src="../img/logo-cta.png" width="160px" alt="Logo do CTA - Centro Tecnológico de Acessibilidade do IFRS" />
+                    </a>
+                    <a href="https://ifrs.edu.br">
+                        <img src="../img/logo-ifrs.png" width="160px" alt="Logo do IFRS - Instituto Federal de Educação Ciência e Tecnologia do Rio Grande do Sul" />
+                    </a>
                 </div>
             </div>
         </div>

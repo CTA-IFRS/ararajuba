@@ -12,6 +12,8 @@ function setOptions() {
             $("#sr-controls").hide();
             $(".tts-controls div").removeClass('invisible');
             $('.tts-controls select').prop('disabled', false);
+            $('.tts-controls .velocidade-group input').prop('disabled', false);
+            $('.tts-controls button#aplicarfiltros').show();
             $(".sr-controls").hide();
         }else if (mode === 'sr') {
             $("#sr").prop('tabindex', 0);
@@ -21,6 +23,8 @@ function setOptions() {
             $(".sr-controls").show();
             $(".tts-controls div").addClass('invisible');
             $('.tts-controls select').prop('disabled', true);
+            $('.tts-controls .velocidade-group input').prop('disabled', true);
+            $('.tts-controls button#aplicarfiltros').hide();
             $("#text").val("");
         };
     });

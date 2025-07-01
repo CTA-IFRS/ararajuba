@@ -142,3 +142,33 @@
 .btn-amaberA1 {
     background-color: var(--amaberA1);
 }
+
+:root {
+    --success: #28A745;
+    --danger: #DC3545;
+    --warning: #FFC107;
+    --info: #17A2B8;
+    --gray100: #F8F9FA;
+    --gray200: #E9ECEF;
+    --gray300: #DEE2E6;
+    --gray400: #CED4DA;
+    --gray500: #ADB5BD;
+    --gray600: #6C757D;
+    --gray700: #495057;
+    --gray800: #343A40;
+    --gray900: #212529;
+    --white: #ffffff;
+    --black: #ffffff;
+    --ar1: #E8F5E9;
+    --ar2: #ABD99B;
+    --ar3: #84BE70;
+    --ar4: #639A50;
+    --ar5: #1B5E20;
+    --ar6: #0D3A10;
+}
+nav.barra-acessibilidade {
+    background-color: var(--gray300);
+}
+.bg-gray100 {
+    background-color: var(--gray100);
+}

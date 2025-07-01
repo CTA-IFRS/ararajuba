@@ -405,7 +405,7 @@ body {
 }
 .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
     color: var(--gray900);
-    background-color: #fff;
+    background-color: transparent;
     border-color:  var(--gray500) var(--gray500) #fff;
 }
 .shadow {
@@ -461,4 +461,126 @@ header .botoes .btn-close {
 }
 #collapseConfiguracoes form label {
     color: var(--gray900);
+}
+.nav-tabs .nav-link {
+    height: 41.6px;
+}
+.nav-tabs .nav-link.active {
+    height: 44.6px;
+    font-weight: 600;
+}
+#collapseMenu {
+    width: 212px;
+}
+#collapseMenu .nav-link {
+    margin-left: -16px;
+    margin-right: -16px;
+    border-left: 2px solid transparent;
+    color: var(--gray900) !important;
+}
+#collapseMenu .nav-link:hover,
+#collapseMenu .nav-link:focus {
+    background-color: var(--ar1);
+    border-left: 2px solid var(--ar5);
+}
+.modal-dialog {
+    max-width: 588px !important;
+}
+.modal-body {
+    border-top: 1px solid var(--gray400);
+    border-bottom: 1px solid var(--gray400);
+}
+.modal-body p,
+.modal-body li {
+    color: var(--gray900) !important;
+}
+.modal-footer {
+    justify-content: center;
+}
+.modal-footer img {
+    height: 55px;
+    object-fit: cover;
+    width: auto;
+}
+.alto-contraste .bg-white,
+.alto-contraste .logo-container a {
+    background-color: var(--gray900) !important;
+}
+.alto-contraste .logo-container img {
+    filter: brightness(100);
+}
+.alto-contraste .h1, .alto-contraste .h2, .alto-contraste .h3, .alto-contraste .h4, .alto-contraste .h5, .alto-contraste .h6,
+.alto-contraste #collapseConfiguracoes button.icon,
+.alto-contraste #collapseConfiguracoes form label {
+    color: var(--white);
+}
+.alto-contraste .btn.btn-primary,
+.alto-contraste .btn.btn-secondary.active,
+.alto-contraste .btn.btn-secondary:hover,
+.alto-contraste .btn.btn-secondary:focus,
+.alto-contraste .btn.btn-outline.active,
+.alto-contraste .btn.btn-outline:hover,
+.alto-contraste .btn.btn-outline:focus {
+    background-color: var(--white) !important;
+    color: #000 !important;
+}
+.alto-contraste .alert a {
+    background-color: transparent !important;
+    color: black !important;
+}
+.alto-contraste header .botoes .btn-close {
+    color: #FFF;
+    background-color: transparent;
+}
+.alto-contraste #collapseMenu .nav-link {
+    background-color: var(--gray900);
+    color: #fff !important;
+}
+.alto-contraste #collapseMenu .nav-link:hover, .alto-contraste #collapseMenu .nav-link:focus {
+    background-color: #000;
+    border-left: 2px solid var(--white);
+}
+.alto-contraste #collapseMenu .logo-cta {
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 8px;
+}
+.alto-contraste .nav-tabs .nav-link {
+    color: #ffffff;
+}
+.alto-contraste .nav-tabs .nav-item .nav-link {
+    background-color: transparent;
+}
+.alto-contraste .modal-content {
+    background-color: #000;
+}
+.alto-contraste .modal-body p, .alto-contraste .modal-body li {
+  color: var(--white) !important;
+}
+.alto-contraste .modal-footer a {
+    padding: 12px;
+    border-radius: 8px;
+}
+.alto-contraste .modal-footer a,
+.alto-contraste .modal-footer img {
+    background-color: #fff !important;
+}
+.alto-contraste .nav-tabs .nav-link.active, .alto-contraste .nav-tabs .nav-item.show .nav-link {
+    border-color:  var(--gray500) var(--gray500) var(--gray900);
+}
+.sepia .bg-white,
+.sepia .logo-container a,
+.sepia .modal-content {
+    background-color: #f4ecd8 !important;
+}
+.sepia header .botoes .btn-close {
+    background-color: transparent;
+}
+.sepia .nav-tabs .nav-link.active, .sepia .nav-tabs .nav-item.show .nav-link {
+    border-color:  var(--gray500) var(--gray500) #f4ecd8;
+}
+.sepia #collapseMenu .nav-link:hover,
+.sepia #collapseMenu .nav-link:focus {
+    background-color: var(--gray100);
+    border-left: 2px solid var(--gray700);
 }
