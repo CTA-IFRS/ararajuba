@@ -44,3 +44,60 @@ nav.barra-acessibilidade .btn-a11y {
     box-shadow: whitesmoke !important;
     background-color: black !important;
 }
+
+.docs-content {
+    margin: 0 auto;
+}
+
+body {
+    padding-top: 160px;
+}
+
+.docs-article {
+    padding: 0 2rem;
+}
+
+.docs-article .docs-section {
+    padding: 1rem 0;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    color: #212529 !important;
+}
+
+.base-text2 {
+    font-size: 17px !important;
+}
+
+.lead-text2 {
+    color: #495057 !important;
+}
+
+.alto-contraste .branding.docs-branding {
+    border-bottom: 1px solid #ffffff;
+}
+
+.alto-contraste .h1,
+.alto-contraste .h2,
+.alto-contraste .h3,
+.alto-contraste .h4,
+.alto-contraste .h5,
+.alto-contraste .h6,
+.alto-contraste h1,
+.alto-contraste h2,
+.alto-contraste h3,
+.alto-contraste h4,
+.alto-contraste h5,
+.alto-contraste h6 {
+    color: #ffffff !important;
+}
+
+.icon-contraste {
+    background-color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+}
+
+.alto-contraste .social-list li {
+    background: transparent;
+}

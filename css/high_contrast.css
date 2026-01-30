@@ -68,19 +68,55 @@
     border: 1px #2E7D32 solid !important;
 }
 
-.btn {
-    background-color: #1B5E20 !important;
-    color: #ffffff!important;
-}
-
-.btn:hover {
-    background-color: #2E7D32 !important;
-    box-shadow: 0 0 0.5em #b7bdb7 !important;
-}
-
 .alto-contraste .btn:hover {
     color: rgb(255, 255, 255) !important;
     box-shadow: 0 0 0.5em #43A047 !important;
     background-color: rgb(0, 0, 0) !important;
     border: 1px #2E7D32 solid !important;
+}
+
+.alto-contraste .btn-primary,
+.alto-contraste .btn-dark,
+.alto-contraste .barra-acessibilidade .navbar-toggler
+{
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+
+.alto-contraste .btn-dark:focus,
+.alto-contraste .btn-dark:hover,
+.alto-contraste .btn-primary:focus,
+.alto-contraste .btn-primary:hover,
+.alto-contraste .btn-primary:not(:disabled):not(.disabled).active:focus,
+.alto-contraste .btn-primary:not(:disabled):not(.disabled):active:focus,
+.alto-contraste .show > .btn-primary.dropdown-toggle:focus,
+.alto-contraste .btn-primary.focus, .btn-primary:focus {
+    box-shadow: 0 0 1em #F0D9F2 !important;
+}
+
+body.alto-contraste .navbar-brand img {
+    filter: brightness(100);
+}
+
+.alto-contraste .btn.btn-primary.active,
+.alto-contraste .btn.btn-primary:hover,
+.alto-contraste .btn.btn-primary:focus {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+
+.alto-contraste .h1,
+.alto-contraste .h2,
+.alto-contraste .h3,
+.alto-contraste .h4,
+.alto-contraste .h5,
+.alto-contraste .h6,
+.alto-contraste h1,
+.alto-contraste h2,
+.alto-contraste h3,
+.alto-contraste h4,
+.alto-contraste h5,
+.alto-contraste h6,
+.alto-contraste .base-text2 {
+    color: #ffffff;
 }
