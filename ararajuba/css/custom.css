@@ -584,3 +584,12 @@ header .botoes .btn-close {
     background-color: var(--gray100);
     border-left: 2px solid var(--gray700);
 }
+@media (max-width: 480px) {
+  .btn-menu {
+    width: 44px !important;
+    height: 44px;
+  }
+  .botoes {
+    margin-right: -15px;
+  }
+}

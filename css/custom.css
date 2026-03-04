@@ -22,7 +22,7 @@
     --gray800: #343A40;
     --gray900: #212529;
     --white: #ffffff;
-    --black: #ffffff;
+    --black: #000000;
     --ar1: #E8F5E9;
     --ar2: #ABD99B;
     --ar3: #84BE70;
@@ -121,7 +121,7 @@ body {
     font-weight: 500;
     font-size: 19px;
     line-height: 34px;
-    color: var(--gray600);
+    color: var(--gray700);
 }
 .lead-text3 {
     font-family: "Nunito", sans-serif;
@@ -257,4 +257,7 @@ body {
 .navbar-light .navbar-toggler {
   color: #54595E;
   border-color: var(--gray400);
+}
+.text-gray700 {
+    color: var(--gray700);
 }

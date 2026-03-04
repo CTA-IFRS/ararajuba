@@ -101,3 +101,21 @@ body {
 .alto-contraste .social-list li {
     background: transparent;
 }
+
+.docs-article .docs-time {
+    font-size: 13px;
+    color: #495057;
+}
+
+.fa-sr-only, .sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+}
+
+.docs-logo-wrapper {
+    position: relative;
+    top: unset;
+    left: unset;
+    display: none;
+}

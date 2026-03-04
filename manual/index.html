@@ -38,7 +38,7 @@
     <header class="header fixed-top">
         <!-- Barra de acessibilidade -->
         <nav class="barra-acessibilidade navbar navbar-expand-sm navbar-dark" aria-label="Menu de acessibilidade">
-            <button type="button" class="navbar-toggler bg-dark btn-a11y" data-bs-toggle="collapse" data-bs-target="#menuAcessibilidade" aria-controls="menuAcessibilidade" aria-expanded="false" aria-label="Expandir menu">
+            <button type="button" class="navbar-toggler bg-dark btn-a11y btn-manual" data-bs-toggle="collapse" data-bs-target="#menuAcessibilidade" aria-controls="menuAcessibilidade" aria-expanded="false" aria-label="Expandir menu">
 				<span class="navbar-toggler-icon"></span>
 			</button>
             <div id="menuAcessibilidade" class="collapse navbar-collapse">
@@ -51,7 +51,7 @@
         </nav>
 
         <div class="branding docs-branding">
-            <div class="container-fluid position-relative py-3">
+            <div class="container-fluid position-relative py-3 d-flex align-items-center">
                 <div class="docs-logo-wrapper">
                     <button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none" type="button">
                         <span></span>
@@ -61,7 +61,7 @@
                     </button>
                 </div>
                 <!--//docs-logo-wrapper-->
-                <div class="docs-top-utilities d-flex justify-content-end align-items-center">
+                <div class="docs-top-utilities d-flex justify-content-end align-items-center w-100">
                     <!-- <a href="index.html" class="btn btn-secondary d-none d-lg-flex">Voltar para homepage</a> -->
                     <div class="site-logo align-items-start">
                         <a class="navbar-brand" href="../">
@@ -70,7 +70,7 @@
                         </a>
                     </div>
                     <div class="ms-auto">
-                        <a href="../ararajuba/index.html" class=" ms-3 btn btn-primary d-lg-flex btn-goto-beluga ">Acessar o Ararajuba
+                        <a href="../ararajuba/index.html" class=" ms-3 btn btn-primary d-none d-lg-flex btn-goto-ararajuba ">Acessar o Ararajuba
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right ms-2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                         </a>
                     </div>
@@ -110,6 +110,7 @@
                 <h1 class="sr-only ">Ararajuba - Manuais</h1>
                 <article class="docs-article " id="section-1 ">
                     <header class="docs-header ">
+                        <h2 class="docs-heading">Introdução <span class="docs-time small-text">Última atualização: 30/01/2026</span></h2>
                         <section class="docs-intro ">
                             <p class="lead-text2">A Ferramenta de comunicação Ararajuba foi desenvolvida pelo Centro Tecnológico de Acessibilidade (CTA) com o objetivo de auxiliar pessoas que tenham alguma dificuldade na fala e/ou na audição. A ferramenta possibilita que a
                             pessoa digite em seu teclado o que deseja comunicar e, ao clicar na opção de “Ler em voz alta” da ferramenta, ela irá vocalizar a palavra, frase ou número escrito. Além disso, é possível que a pessoa utilize o microfone para
@@ -123,7 +124,7 @@
 
                 <article class="docs-article " id="section-2 ">
                     <header class="docs-header pt-4">
-                        <h2 class="h2">Manual de uso</h1>
+                        <h2 class="h1">Manual de uso</h1>
 
                             <!--//docs-intro-->
                     </header>
